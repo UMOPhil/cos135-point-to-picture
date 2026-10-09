@@ -9,7 +9,7 @@ char myList[5] = {'f', 'i', 'r', 'e'};
 
 
 
-    int c = pickChar(myList, 5);
+    char c = genRandomChar(.5, myList, 4);
     printf("%c\n", c);
 
     return 0;

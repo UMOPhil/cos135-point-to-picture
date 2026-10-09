@@ -3,5 +3,6 @@
 
 char pickChar(char *charList, int size);
 
+char genRandomChar(double charChance, char *charList,int size);
 
 #endif

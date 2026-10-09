@@ -14,6 +14,30 @@ char pickChar(char *charizardMemory, int size){
 
 }
 
+char genRandomChar(double charChance, char *charList,int size){
+    srand(time(NULL));
+    //fix for mac OS generating bad random first
+    rand();
+   //generate random number
+   int gen = rand();
+   printf("%d\n", gen);
+   //normalize the chance to the random number range
+   int charChanceValue = charChance*RAND_MAX;
+   printf("%d\n", charChanceValue);
+   //if the random number is less than the chance threshold
+   //then return a character.
+   if (gen < charChanceValue){
+      return pickChar(charList, size);
+   }
+   //if the random number is greater than or equal to the threshold then return a space.
+   else{
+      return ' ';
+   }
+
+}
+
+
+
 
 // //suppose to return either a space or a random character based on the probabililty given?? and the list?
 
