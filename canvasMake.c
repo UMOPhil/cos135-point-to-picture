@@ -20,10 +20,10 @@ char genRandomChar(double charChance, char *charList,int size){
     rand();
    //generate random number
    int gen = rand();
-   printf("%d\n", gen);
+  
    //normalize the chance to the random number range
    int charChanceValue = charChance*RAND_MAX;
-   printf("%d\n", charChanceValue);
+   
    //if the random number is less than the chance threshold
    //then return a character.
    if (gen < charChanceValue){
