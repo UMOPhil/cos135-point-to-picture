@@ -3,9 +3,9 @@
 #include <time.h>
 #include "canvasMake.h"
 
-int randCounter = 5;
+static int randCounter = 5;
 
-char pickChar(char *charizardMemory, int size){
+static char pickChar(char *charizardMemory, int size){
    //generate a random integer from 0 to the last spot of the list & save it so m.
    //srand(time(NULL) + randCounter * 2);
    int m = rand()%size;
@@ -14,7 +14,7 @@ char pickChar(char *charizardMemory, int size){
 
 }
 
-char genRandomChar(double charChance, char *charList,int size){
+static char genRandomChar(double charChance, char *charList,int size){
    
     // srand(time(NULL) + randCounter);
     //fix for mac OS generating bad random first
@@ -74,7 +74,7 @@ void printCanvas(char** Canvas, int width, int height){
    }
 }
 
-void freeCanvas(char** Canvas, int width, int height){
+ void freeCanvas(char** Canvas, int width, int height){
 
    for (int i = 0; i < height; i++){
       free(Canvas[i]);
