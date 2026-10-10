@@ -9,4 +9,6 @@ char** createCanvas(int width, int height);
 
 void printCanvas(char** Canvas, int width, int height);
 
+void freeCanvas(char** Canvas, int width, int height);
+
 #endif

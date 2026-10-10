@@ -21,6 +21,8 @@ int main(int argc, char *argv[]){
 
     printCanvas(Canvas, width, height);
 
+    freeCanvas(Canvas, width, height);
+
     return 0;
 
 
