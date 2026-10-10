@@ -7,5 +7,6 @@ char genRandomChar(double charChance, char *charList,int size);
 
 char** createCanvas(int width, int height);
 
+void printCanvas(char** Canvas, int width, int height);
 
 #endif

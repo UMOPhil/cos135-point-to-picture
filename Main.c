@@ -15,14 +15,13 @@ int main(int argc, char *argv[]){
     int height = atoi(argv[1]);
     int width = atoi(argv[2]);
 
-    char myList[5] = {'f', 'i', 'r', 'e'};
-
     printf("width is %d and height is %d\n", width, height);
 
-    createCanvas(width, height);
+    char** Canvas = createCanvas(width, height);
+
+    printCanvas(Canvas, width, height);
 
     return 0;
-
 
 
 }
