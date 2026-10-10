@@ -23,7 +23,7 @@ char genRandomChar(double charChance, char *charList,int size){
   
    //normalize the chance to the random number range
    int charChanceValue = charChance*RAND_MAX;
-   
+
    //if the random number is less than the chance threshold
    //then return a character.
    if (gen < charChanceValue){
@@ -33,6 +33,16 @@ char genRandomChar(double charChance, char *charList,int size){
    else{
       return ' ';
    }
+
+}
+
+char** createCanvas(int width, int height){
+   
+   char **Canvas = malloc(height * sizeof(char *));
+   for (int i = 0; i < height; i++) {
+      Canvas[i] = malloc(width * sizeof(char));
+   }
+   return Canvas;
 
 }
 

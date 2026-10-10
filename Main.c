@@ -19,9 +19,10 @@ int main(int argc, char *argv[]){
 
     printf("width is %d and height is %d\n", width, height);
 
-    char c = genRandomChar(.5, myList, 4);
-    printf("%c\n", c);
+    createCanvas(width, height);
 
     return 0;
+
+
 
 }

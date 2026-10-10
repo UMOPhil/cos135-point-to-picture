@@ -5,4 +5,7 @@ char pickChar(char *charList, int size);
 
 char genRandomChar(double charChance, char *charList,int size);
 
+char** createCanvas(int width, int height);
+
+
 #endif
