@@ -1,3 +1,6 @@
+//Phil Ramos - canvasMake.c file holds all the functions that generate chars & spaces
+//Acknowlegement: Special thanks to my tutor Hayden, who helped me design, debug & understand this assignemnt.
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
@@ -45,9 +48,10 @@ char** createCanvas(int width, int height){
    for (int i = 0; i < height; i++) {
       Canvas[i] = malloc(width * sizeof(char));
    }
-
+   //list used for returning a character
    char validCharacters[8] = {'c', 'o', 's', '1', 'e', 'p', 'z', 't'};
-
+   //nested for loop that fills the canvas that malloc created.
+   //r & c for loop goes through each & fills it in with either a character or a space.
    for (int r = 0; r < height; r++){
       for (int c = 0; c < width; c++){
          Canvas[r][c] = genRandomChar(0.2, validCharacters, 8);
@@ -55,7 +59,7 @@ char** createCanvas(int width, int height){
          srand(time(NULL) + randCounter);
       }
    }
-
+   //the finished grid is handed back to return Canvas
    return Canvas;
 
 }
@@ -63,7 +67,7 @@ char** createCanvas(int width, int height){
 
 
 
-//print the canvas
+//print the canvas using similar nested for loop logic with r & c.
 
 void printCanvas(char** Canvas, int width, int height){
    for (int r = 0; r < height; r++){
@@ -74,6 +78,7 @@ void printCanvas(char** Canvas, int width, int height){
    }
 }
 
+//clean up the memory because malloc borrows it from the computer.
  void freeCanvas(char** Canvas, int width, int height){
 
    for (int i = 0; i < height; i++){
@@ -82,45 +87,3 @@ void printCanvas(char** Canvas, int width, int height){
       free(Canvas);
 }
 
-
-
-// //suppose to return either a space or a random character based on the probabililty given?? and the list?
-
-// //so this function needs to access my previous list & return a character OR space 20% and 80% of the time?
-// //how do we return a character or space based on given probability?
-// //is that also a function in C for the probability part?
-
-// char genRandomChar(char *charizardMemory, int size){
-
-// //returns random character or space?
-
-//  int r = rand() / ;
-
-//  //possible to condense this with a for loop?
-
-//  if (r < int size){
-
-//     return r;
-
-//  } else {
-     
-//     return ' ';
-//  }
-
-// }
-
-
-// //is this datatype right for the freeCanvas function?
-
-// char freeCanvas(){
-
-
-// }
-
-
-// createCanvas(){
-
-// }
-
-// //how do pointers relate to the arrays we are generating?
-// //the arrays give us height and width through pointers?
